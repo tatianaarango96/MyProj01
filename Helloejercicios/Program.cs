@@ -263,33 +263,33 @@ Console.Write("Ingresa un número: ");
             {
                 Console.WriteLine("La entrada no puede estar vacía.");
             }
-
 //Ejercicio 11 Average of Four
 //Pide al usuario cuatro números y muestra el promedio. 
-   {
-        Console.WriteLine("Este programa calcula el promedio de cuatro números.");
-        double suma = 0;
-        int cantidadNumeros = 4;
+{
+        Console.WriteLine("Ingrese cuatro números para calcular su promedio:");
+        double Numero1 = PedirNumero("Número 1: ");
+        double Numero2 = PedirNumero("Número 2: ");
+        double Numero3 = PedirNumero("Número 3: ");
+        double Numero4 = PedirNumero("Número 4: ");
 
-        for (int i = 1; i <= cantidadNumeros; i++)
+        double promedio = (Numero1 + Numero2 + Numero3 + Numero4) / 4;
+
+        Console.WriteLine($"El promedio de los números ingresados es: {promedio}");
+    }
+
+    static double PedirNumero(string mensaje)
+    {
+        double numero;
+        while (true)
         {
-            Console.Write($"Número {i}: ");
-            if (double.TryParse(Console.ReadLine(), out double Numero))
+            Console.Write(mensaje);
+            if (double.TryParse(Console.ReadLine(), out numero))
             {
-                suma += numero;
+                return numero;
             }
             else
             {
                 Console.WriteLine("Entrada no válida. Por favor, ingresa un número válido.");
-                i--; // Restar 1 a i para repetir la entrada del número inválido.
             }
         }
-
-        double promedio = suma / cantidadNumeros;
-
-        Console.WriteLine("Calculando el promedio...");
-        Console.WriteLine($"El promedio de los cuatro números es: {promedio}");
-}
-
-//Ejercicio 12 Smallest of Five 
-//Pide al usuario cinco números y muestra el más pequeño. 
+    }
