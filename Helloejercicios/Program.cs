@@ -188,3 +188,17 @@ Console.Write("Ingresa un número: ");
 
         Console.ReadLine();
     }
+ //Ejercicio 8 Sum of Evens
+//Calcula y muestra la suma de los números pares entre 1 y 50 
+{
+        int suma = 0;
+
+        for (int i = 2; i <= 50; i += 2)
+        {
+            suma += i;
+        }
+
+        Console.WriteLine($"La suma de los números pares entre 1 y 50 es: {suma}");
+        Console.ReadLine();
+    }
+
