@@ -325,5 +325,32 @@ Console.Write("Ingresa un número: ");
 
         Console.ReadLine();
     }
+   //Ejercicio 13 Vowel Counter 
+   //Pide una palabra al usuario y devuelve el número de vocales en 
+  //esa palabra. 
+   {
+        Console.Write("Por favor, ingrese una palabra: ");
+        string? palabraVocales = Console.ReadLine();
+        if (palabraVocales != null) 
+        {
+            int contador = contadorVocales(palabraVocales);
+            Console.WriteLine($"Resultado total de vocales: {contador}");
+        }
+        else
+        {
+            Console.WriteLine("La entrada no puede estar vacía.");
+        }
+    }
 
-
+    static int contadorVocales(string palabra)
+    {
+        int contador = 0;
+        foreach (char letra in palabra.ToLower()) 
+        {
+            if ("aeiou".Contains(letra)) // Verificar las  vocales dentro de la palabra
+            {
+                contador++;
+            }
+        }
+        return contador;
+    }
