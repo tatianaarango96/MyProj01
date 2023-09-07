@@ -156,5 +156,35 @@ Console.Write("Ingresa un número: ");
 
         Console.ReadLine();
     }
+//Ejercicio 7 Remainder Finder 
+//Solicita dos números y muestra el residuo de la división del 
+//primero entre el segundo. 
+{
+        Console.Write("Ingresa el primer número: ");
+        if (double.TryParse(Console.ReadLine(), out double número1))
+        {
+            Console.Write("Ingresa el segundo número: ");
+            if (double.TryParse(Console.ReadLine(), out double número2))
+            {
+                if (número2 != 0)
+                {
+                    double residuo = número1 % número2;
+                    Console.WriteLine($"El residuo de {número1} entre {número2} es: {residuo}");
+                }
+                else
+                {
+                    Console.WriteLine("No se puede dividir por cero. Ingresa un segundo número diferente de cero.");
+                }
+            }
+            else
+            {
+                Console.WriteLine("Entrada no válida para el segundo número. Ingresa un valor numérico.");
+            }
+        }
+        else
+        {
+            Console.WriteLine("Entrada no válida para el primer número. Ingresa un valor numérico.");
+        }
 
-    
+        Console.ReadLine();
+    }
