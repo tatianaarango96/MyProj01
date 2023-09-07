@@ -354,3 +354,41 @@ Console.Write("Ingresa un número: ");
         }
         return contador;
     }
+  //Ejercicio 14 Factorial Finder 
+   //Pide un número al usuario y devuelve el factorial de ese número
+     {
+        Console.Write("Ingresa un número para calcular su factorial: ");
+        if (int.TryParse(Console.ReadLine(), out int numerofactorial))
+        {
+            long factorial = calcularFactorial(numerofactorial);
+            Console.WriteLine($"Resultado: {factorial}");
+        }
+        else
+        {
+            Console.WriteLine("Ingresa un número entero válido.");
+        }
+    }
+
+    static long calcularFactorial(int n)
+    {
+        if (n < 0)
+        {
+            throw new ArgumentException("No ingresar números negativos.");
+        }
+
+        long resultado = 1;
+        for (int i = 2; i <= n; i++)
+        {
+            resultado *= i;
+        }
+
+        return resultado;
+    }
+   //Ejercicio 15  InRange Validator 
+   //Pide un número al usuario y verifica si está en el rango de 10 a 20 
+   //(ambos incluidos). 
+   
+
+
+
+
