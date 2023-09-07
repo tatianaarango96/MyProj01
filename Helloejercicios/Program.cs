@@ -263,6 +263,31 @@ Console.Write("Ingresa un número: ");
             {
                 Console.WriteLine("La entrada no puede estar vacía.");
             }
-            
+
 //Ejercicio 11 Average of Four
 //Pide al usuario cuatro números y muestra el promedio. 
+   {
+        Console.WriteLine("Este programa calcula el promedio de cuatro números.");
+        double suma = 0;
+        int cantidadNumeros = 4;
+
+        for (int i = 1; i <= cantidadNumeros; i++)
+        {
+            Console.Write($"Número {i}: ");
+            if (double.TryParse(Console.ReadLine(), out double Numero))
+            {
+                suma += numero;
+            }
+            else
+            {
+                Console.WriteLine("Entrada no válida. Por favor, ingresa un número válido.");
+                i--; // Restar 1 a i para repetir la entrada del número inválido.
+            }
+        }
+
+        double promedio = suma / cantidadNumeros;
+
+        Console.WriteLine("Calculando el promedio...");
+        Console.WriteLine($"La suma de los cuatro números es: {suma}");
+        Console.WriteLine($"El promedio de los cuatro números es: {promedio}");
+}
