@@ -288,6 +288,8 @@ Console.Write("Ingresa un número: ");
         double promedio = suma / cantidadNumeros;
 
         Console.WriteLine("Calculando el promedio...");
-        Console.WriteLine($"La suma de los cuatro números es: {suma}");
         Console.WriteLine($"El promedio de los cuatro números es: {promedio}");
 }
+
+//Ejercicio 12 Smallest of Five 
+//Pide al usuario cinco números y muestra el más pequeño. 
