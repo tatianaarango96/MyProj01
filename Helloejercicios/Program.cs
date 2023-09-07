@@ -66,3 +66,28 @@ Console.Write("Ingresa un número: ");
              {
              Console.WriteLine("Entrada no válida. Ingresa un número válido.");
 }
+//Ejercicio 4  Circle Perimeter
+//Pide al usuario el radio de un círculo y using System;
+{
+        double radio;
+
+        Console.Write("Ingresa el radio del círculo: ");
+        if (double.TryParse(Console.ReadLine(), out radio))
+        {
+            if (radio >= 0)
+            {
+                double perimetro = 2 * Math.PI * radio;
+                Console.WriteLine($"El perímetro del círculo es: {perimetro}");
+            }
+            else
+            {
+                Console.WriteLine("El radio no puede ser negativo.");
+            }
+        }
+        else
+        {
+            Console.WriteLine("Entrada no válida. Ingresa un valor numérico para el radio.");
+        }
+
+        Console.ReadLine();
+    }
