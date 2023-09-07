@@ -24,7 +24,7 @@ else
 {
     Console.WriteLine("Entrada no válida. Ingresa un número válido.");
 }
-// Ejercicio 2  Double or Tripl
+//Ejercicio 2  Double or Tripl
 // Solicita al usuario dos números. Si el primero es mayor, devuelva 
 //su doble, de lo contrario devuelva el triple del segundo. 
  Console.Write("Ingresa el primer número: ");
@@ -44,4 +44,25 @@ if (double.TryParse(Console.ReadLine(), out double numero1))
 else
 {
     Console.WriteLine("Entrada no válida para el primer número.");
+}
+//Ejercicio 3 Root or Squar
+// Pide al usuario un número. Si es positivo, devuelve su raíz 
+//cuadrada, de lo contrario, devuelve su cuadrado. 
+Console.Write("Ingresa un número: ");
+               if (double.TryParse(Console.ReadLine(), out double numero3))
+            {
+               if (numero3 > 0)
+           {
+               double resultado3 = Math.Sqrt(numero3);
+               Console.WriteLine($"Resultado: {resultado3}");
+               }
+               else
+             {
+             double resultado3 = Math.Pow(numero3, 2);
+             Console.WriteLine($"Resultado: {resultado3}");
+              }
+              }
+             else
+             {
+             Console.WriteLine("Entrada no válida. Ingresa un número válido.");
 }
