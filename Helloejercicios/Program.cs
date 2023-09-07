@@ -249,7 +249,7 @@ Console.Write("Ingresa un número: ");
         Console.ReadLine();
     }
 
-//Ejercicio String Length
+//Ejercicio 10 String Length
 //Pide una palabra al usuario y muestra la longitud de esa palabra. 
  Console.Write("Ingrese una palabra: ");
             string? palabra = Console.ReadLine();
@@ -263,6 +263,6 @@ Console.Write("Ingresa un número: ");
             {
                 Console.WriteLine("La entrada no puede estar vacía.");
             }
-
-            Console.WriteLine("Ingrese cuatro números para calcular su promedio:");
-
+            
+//Ejercicio 11 Average of Four
+//Pide al usuario cuatro números y muestra el promedio. 
