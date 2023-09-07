@@ -248,3 +248,21 @@ Console.Write("Ingresa un número: ");
 
         Console.ReadLine();
     }
+
+//Ejercicio String Length
+//Pide una palabra al usuario y muestra la longitud de esa palabra. 
+ Console.Write("Ingrese una palabra: ");
+            string? palabra = Console.ReadLine();
+
+            if (!string.IsNullOrEmpty(palabra))
+            {
+                int longitud = palabra.Length;
+                Console.WriteLine($"Resultado: {longitud}");
+            }
+            else
+            {
+                Console.WriteLine("La entrada no puede estar vacía.");
+            }
+
+            Console.WriteLine("Ingrese cuatro números para calcular su promedio:");
+
