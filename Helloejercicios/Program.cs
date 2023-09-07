@@ -293,3 +293,37 @@ Console.Write("Ingresa un número: ");
             }
         }
     }
+    //Ejercicio 12 Smallest of Five
+    //Pide al usuario cinco números y muestra el más pequeño. 
+{
+        Console.WriteLine("Por favor, ingresa cinco números.");
+
+        double numeroMinimo = double.MaxValue; // Inicializar con un valor muy grande.
+
+        for (int i = 1; i <= 5; i++)
+        {
+            Console.Write($"Número {i}: ");
+            if (double.TryParse(Console.ReadLine(), out double numeroMin))
+            {
+                numeroMinimo = Math.Min(numeroMinimo, numero); // Utilizar Math.Min para encontrar el número mínimo.
+            }
+            else
+            {
+                Console.WriteLine("Por favor, ingresa un número válido.");
+                i--; // Restar 1 a i para repetir la entrada del número inválido.
+            }
+        }
+
+        if (numeroMinimo == double.MaxValue)
+        {
+            Console.WriteLine("No se ingresaron números válidos.");
+        }
+        else
+        {
+            Console.WriteLine($"El número más pequeño de los cinco números ingresados es: {numeroMinimo}");
+        }
+
+        Console.ReadLine();
+    }
+
+
