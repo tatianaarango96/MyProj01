@@ -91,3 +91,39 @@ Console.Write("Ingresa un número: ");
 
         Console.ReadLine();
     }
+//Ejercicio 5 Midweek Day   
+//Solicita al usuario un número entre 1 y 7 y muestra el día de la 
+//semana correspondiente, pero solo considerando los días laborables. 
+    {
+        Console.Write("Ingresa un número del 1 al 7: ");
+        if (int.TryParse(Console.ReadLine(), out int número))
+        {
+            switch (número)
+            {
+                case 1:
+                    Console.WriteLine("Lunes (Laborable)");
+                    break;
+                case 2:
+                    Console.WriteLine("Martes (Laborable)");
+                    break;
+                case 3:
+                    Console.WriteLine("Miércoles (Laborable)");
+                    break;
+                case 4:
+                    Console.WriteLine("Jueves (Laborable)");
+                    break;
+                case 5:
+                    Console.WriteLine("Viernes (Laborable)");
+                    break;
+                default:
+                    Console.WriteLine("Día no laborable o número fuera de rango.");
+                    break;
+            }
+        }
+        else
+        {
+            Console.WriteLine("Entrada no válida. Ingresa un número válido.");
+        }
+
+        Console.ReadLine();
+    }
